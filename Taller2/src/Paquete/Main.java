@@ -1,5 +1,6 @@
 package Paquete;
 
+import java.awt.Menu;
 import java.io.*;
 import java.util.*;
 
@@ -7,7 +8,19 @@ import java.util.*;
 public class Main {
 
 	
-	
+	public static void MenuUno() {
+		
+		System.out.println("1) Revisar equipo.");
+		System.out.println("2) Salir a capturar.");
+		System.out.println("3) Acceso al PC (cambiar pokemon del equipo).");
+		System.out.println("4) Retar un gimnasio.");
+		System.out.println("5) Desafio al Alto Mando.");
+		System.out.println("6) Curar pokémon.");
+		System.out.println("7) Guardar.");
+		System.out.println("8) Guardar y Salir.");
+		System.out.print("> ");
+		
+	}
 	
 	
 	
@@ -25,8 +38,15 @@ public class Main {
 		
 		switch(op) {
 		case 1:
+			System.out.println();
+			MenuUno();
+			int po2 = Integer.valueOf(sc.nextLine());
+			
+			
 			break;
 		case 2:
+			
+			
 			
 			
 			
