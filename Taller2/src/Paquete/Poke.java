@@ -13,13 +13,7 @@ public class Poke {
 		
 		Scanner lector = new Scanner(pokedex);
 		
-		while(lector.hasNextLine()) {
-			String line = lector.hasNextLine();
-			String[] part = line.split(";");
-			
-			
-			
-		}
+		
 		
 		
 		
