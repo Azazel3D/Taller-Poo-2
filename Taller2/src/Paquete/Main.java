@@ -47,6 +47,34 @@ public class Main {
 		case 2:
 			
 			
+			try {
+				File Partidas = new File("Registros.txt");
+				BufferedWriter escritor = new BufferedWriter(new FileWriter(Partidas));
+				Scanner lector = new Scanner(Partidas);
+				
+				System.out.print("Nombre: ");
+				String name = sc.nextLine();
+				
+				
+				
+				escritor.write(name);
+				escritor.newLine();
+				escritor.flush();
+				
+				
+				
+				
+				
+				
+				
+				
+				escritor.close();
+				lector.close();
+				} catch (IOException e) {
+					System.out.println("hola");
+				}
+			
+			
 			
 			
 			
