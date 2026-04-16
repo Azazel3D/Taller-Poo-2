@@ -85,7 +85,7 @@ public class Main {
 				escritor.flush();
 				escritor.newLine();
 				System.out.println(name+", que deseas hacer?");
-				
+				System.out.println();
 				MenuUno();
 				int op3 = Integer.valueOf(sc.nextLine());
 				
