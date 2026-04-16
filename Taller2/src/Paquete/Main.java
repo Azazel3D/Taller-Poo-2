@@ -70,6 +70,7 @@ public class Main {
 				
 				
 				
+				
 				escritor.close();
 				lector.close();
 				} catch (IOException e) {
