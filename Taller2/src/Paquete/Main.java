@@ -48,7 +48,8 @@ public class Main {
 			
 			
 			try {
-				File Partidas = new File("Registros.txt");
+				
+				File Partidas = new File("Archivos/Registros.txt");
 				BufferedWriter escritor = new BufferedWriter(new FileWriter(Partidas));
 				Scanner lector = new Scanner(Partidas);
 				
