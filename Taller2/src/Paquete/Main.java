@@ -55,7 +55,8 @@ public class Main {
 				
 				System.out.print("Nombre: ");
 				String name = sc.nextLine();
-				
+				System.out.println("Bienvenido "+name+"!!");
+				System.out.println();
 				
 				
 				escritor.write(name);
