@@ -1,6 +1,6 @@
 package Paquete;
 
-import java.awt.Menu;
+
 import java.io.*;
 import java.util.*;
 
@@ -38,9 +38,30 @@ public class Main {
 		
 		switch(op) {
 		case 1:
-			System.out.println();
-			MenuUno();
-			int po2 = Integer.valueOf(sc.nextLine());
+			try {
+				File Partidas1 = new File("Archivos/Registros.txt");			
+				Scanner lector1 = new Scanner(Partidas1);
+				
+				
+				if (Partidas1.exists() && Partidas1.length()==0) {
+					System.out.println("no hay partidas guardadas");
+				}
+				
+				
+			
+				lector1.close();
+			} catch (IOException e) {
+				System.out.println();
+				MenuUno();
+				int po2 = Integer.valueOf(sc.nextLine());
+				
+				
+				
+			}
+			
+			
+			
+			
 			
 			
 			break;
@@ -49,22 +70,24 @@ public class Main {
 			
 			try {
 				
-				File Partidas = new File("Archivos/Registros.txt");
+				File Partidas = new File("Archivos/Registros.txt");				
 				BufferedWriter escritor = new BufferedWriter(new FileWriter(Partidas));
 				Scanner lector = new Scanner(Partidas);
 				
 				System.out.print("Nombre: ");
 				String name = sc.nextLine();
+				System.out.println();
 				System.out.println("Bienvenido "+name+"!!");
 				System.out.println();
 				
 				
 				escritor.write(name);
-				escritor.newLine();
 				escritor.flush();
+				escritor.newLine();
+				System.out.println(name+", que deseas hacer?");
 				
-				
-				
+				MenuUno();
+				int op3 = Integer.valueOf(sc.nextLine());
 				
 				
 				
