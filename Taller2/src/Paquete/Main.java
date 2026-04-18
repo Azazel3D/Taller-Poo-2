@@ -82,8 +82,9 @@ public class Main {
 				
 				
 				escritor.write(name);
-				escritor.flush();
 				escritor.newLine();
+				escritor.flush();
+				
 				System.out.println(name+", que deseas hacer?");
 				System.out.println();
 				MenuUno();
