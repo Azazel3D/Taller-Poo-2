@@ -83,7 +83,7 @@ public class Main {
 				
 				escritor.write(name);
 				escritor.newLine();
-				escritor.flush();
+				//escritor.flush();
 				
 				System.out.println(name+", que deseas hacer?");
 				System.out.println();
