@@ -80,10 +80,27 @@ public class Main {
 				System.out.println("Bienvenido "+name+"!!");
 				System.out.println();
 				
+				while (lector.hasNextLine()) {
+					String line = lector.nextLine();
+					
+					if (!line.equals(null)) {
+						
+						escritor.write(name);
+						escritor.newLine();
+						escritor.flush();
+						
+						
+					}else {
+						line = lector.nextLine();
+						escritor.write(name);
+						escritor.newLine();
+						escritor.flush();
+					}
+					
+					
+				}
 				
-				escritor.write(name);
-				escritor.newLine();
-				//escritor.flush();
+				
 				
 				System.out.println(name+", que deseas hacer?");
 				System.out.println();
