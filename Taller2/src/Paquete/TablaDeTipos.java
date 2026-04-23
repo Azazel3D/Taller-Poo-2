@@ -5,7 +5,6 @@ public class TablaDeTipos {
 	
 	//Filas->Pokemon del jugador; Columna->PokemonRival
 	
-	public class TablaTipos {
 	    
 	    private static final double[][] EFECTIVIDAD = {
 	        // NOR  FUE  AGU  PLA  ELE  HIE  LUC  VEN  TIE  VOL  PSI  BIC  ROC  FAN  DRA  ACE  SIN  HAD
@@ -29,12 +28,11 @@ public class TablaDeTipos {
 	        {  1.0, 0.5, 1.0, 1.0, 1.0, 1.0, 2.0, 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 0.5, 2.0, 1.0 }  // HADA
 	    };
 	    
-	    private double encontrarDamage(int jugador, int rival) {
+	    public double encontrarDamage(int jugador, int rival) {
 	    	double damage = EFECTIVIDAD[jugador][rival];
 	    	return damage;
 	    }
 	    
 	    
-	}
 
 }
