@@ -80,8 +80,9 @@ public class Main {
 				System.out.println("Bienvenido "+name+"!!");
 				System.out.println();
 				
-				
-				
+				escritor.write(name);
+				//escritor.flush();
+				escritor.newLine();
 				
 				System.out.println(name+", que deseas hacer?");
 				System.out.println();
