@@ -80,9 +80,25 @@ public class Main {
 				System.out.println("Bienvenido "+name+"!!");
 				System.out.println();
 				
-				escritor.write(name);
-				//escritor.flush();
-				escritor.newLine();
+				
+				if (Partidas.length()==0) {
+					escritor.write(name);
+					escritor.flush();
+					escritor.newLine();
+					escritor.close();
+
+					
+				} else if (Partidas.length()>=1) {
+					escritor.newLine();
+					escritor.write(name);
+					//escritor.flush();
+					escritor.newLine();
+					escritor.close();
+
+				}
+				
+				
+				
 				
 				System.out.println(name+", que deseas hacer?");
 				System.out.println();
@@ -94,10 +110,9 @@ public class Main {
 				
 				
 				
-				escritor.close();
 				lector.close();
 				} catch (IOException e) {
-					System.out.println("hola");
+					System.out.println("Error");
 				}
 			
 			
