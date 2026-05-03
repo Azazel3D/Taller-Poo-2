@@ -82,18 +82,27 @@ public class Main {
 				
 				
 				if (Partidas.length()==0) {
+					System.out.println("papu :v");
 					escritor.write(name);
-					escritor.flush();
 					escritor.newLine();
+					escritor.flush();
 					escritor.close();
 
 					
-				} else if (Partidas.length()>=1) {
+				} else {
+					System.out.println("hola");
+					
 					escritor.newLine();
 					escritor.write(name);
-					//escritor.flush();
 					escritor.newLine();
+					escritor.flush();
 					escritor.close();
+							
+						
+						
+					
+					
+					
 
 				}
 				
