@@ -81,7 +81,7 @@ public class Main {
 				System.out.println();
 				
 				
-				if (Partidas.length()==0) {
+				if (!lector.equals(null)) {
 					System.out.println("papu :v");
 					escritor.write(name);
 					escritor.newLine();
@@ -89,18 +89,23 @@ public class Main {
 					escritor.close();
 
 					
-				} else {
+				} else{
 					System.out.println("hola");
-					
-					escritor.newLine();
-					escritor.write(name);
-					escritor.newLine();
-					escritor.flush();
-					escritor.close();
+					while (lector.hasNextLine()) {
+						
+						String line = lector.nextLine();
+						
+						if (line.equals(null)) {
 							
+							escritor.newLine();
+							escritor.write(name);
+							escritor.newLine();
+							escritor.flush();
+							escritor.close();
+							
+						}
 						
-						
-					
+					}
 					
 					
 
