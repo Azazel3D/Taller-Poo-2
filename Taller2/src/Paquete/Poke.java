@@ -18,8 +18,28 @@ public class Poke {
 		while (lector.hasNextLine()) {
 			
 			String linea = lector.nextLine();
+			String[] partes = linea.split(";");
+			String Nombre = partes[0];
+			String Habitat = partes[1];
+			double aparicion = Double.valueOf(partes[2]);
+			int Hp = Integer.valueOf(partes[3]);
+			int Attack = Integer.valueOf(partes[4]);
+			int defense = Integer.valueOf(partes[5]);
+			int AttackEs = Integer.valueOf(partes[6]);
+			int DefenseEs = Integer.valueOf(partes[7]);
+			int Velocity = Integer.valueOf(partes[8]);
+			String tipo = partes[9];
 			
-			listaPokes.add(linea);
+			
+			
+			if (tipo.equals("Normal")) {
+				
+			}
+			
+			
+			
+			
+			//listaPokes.add(linea);
 		}
 		
 		

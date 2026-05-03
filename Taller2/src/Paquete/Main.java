@@ -22,7 +22,12 @@ public class Main {
 		
 	}
 	
-	
+	public static void menuDos() {
+		
+		
+		
+		
+	}
 	
 	public static void main(String[] args) {
 		
