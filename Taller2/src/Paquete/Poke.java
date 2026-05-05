@@ -34,6 +34,17 @@ public class Poke {
 			
 			if (tipo.equals("Normal")) {
 				
+			} else if(tipo.equals("Fuego")) {
+				
+			} else if (tipo.equals("Agua")) {
+				
+			} else if(tipo.equals("Planta")) {
+				
+			} else if(tipo.equals("Electrico")) {
+				
+				
+			} else if(tipo.equals("Hielo")) {
+				
 			}
 			
 			
