@@ -78,8 +78,13 @@ public class Main {
 				
 				
 				try {
-								
-					BufferedWriter escritor = new BufferedWriter(new FileWriter("Archivos/Registros.txt"));					
+					
+					
+					File Partidas = new File ("Archivos/Registros.txt");
+					BufferedWriter escritor = new BufferedWriter(new FileWriter(Partidas));		
+					
+					Scanner lector =  new Scanner(Partidas);
+					
 					System.out.print("Nombre: ");
 					String name = sc.nextLine();
 					System.out.println();
@@ -88,7 +93,7 @@ public class Main {
 					
 					
 					
-					/*
+					
 					if (!lector.equals(null)) {
 						System.out.println("papu :v");
 						escritor.write(name);
@@ -120,7 +125,7 @@ public class Main {
 					}
 					
 					
-					*/
+					
 					
 					int men2 = 0;
 					
