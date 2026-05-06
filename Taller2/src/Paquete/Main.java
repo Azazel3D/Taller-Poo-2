@@ -35,122 +35,154 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("1) Continuar.");
-		System.out.println("2) Nueva partida.");
-		System.out.println("3) Salir.");
-		System.out.print("> ");
-		int op = Integer.valueOf(sc.nextLine());
+		int men = 0;
 		
-		switch(op) {
-		case 1:
-			try {
-				File Partidas1 = new File("Archivos/Registros.txt");			
-				Scanner lector1 = new Scanner(Partidas1);
-				
-				
-				if (Partidas1.exists() && Partidas1.length()==0) {
-					System.out.println("no hay partidas guardadas");
-				}
-				
-				
+		
+		do {
+			System.out.println("1) Continuar.");
+			System.out.println("2) Nueva partida.");
+			System.out.println("3) Salir.");
+			System.out.print("> ");
+			String op = String.valueOf(sc.nextLine());
 			
-				lector1.close();
-			} catch (IOException e) {
-				System.out.println();
-				MenuUno();
-				int po2 = Integer.valueOf(sc.nextLine());
-				
-				
-				
-			}
-			
-			
-			
-			
-			
-			
-			break;
-		case 2:
-			
-			
-			try {
-				
-				File Partidas = new File("Archivos/Registros.txt");				
-				BufferedWriter escritor = new BufferedWriter(new FileWriter(Partidas));
-				Scanner lector = new Scanner(Partidas);
-				
-				System.out.print("Nombre: ");
-				String name = sc.nextLine();
-				System.out.println();
-				System.out.println("Bienvenido "+name+"!!");
-				System.out.println();
-				
-				
-				if (!lector.equals(null)) {
-					System.out.println("papu :v");
-					escritor.write(name);
-					escritor.newLine();
-					escritor.flush();
-					escritor.close();
-
+			switch(op) {
+			case "1":
+				try {
+					File Partidas1 = new File("Archivos/Registros.txt");			
+					Scanner lector1 = new Scanner(Partidas1);
 					
-				} else{
-					System.out.println("hola");
-					while (lector.hasNextLine()) {
-						
-						String line = lector.nextLine();
-						
-						if (line.equals(null)) {
-							
-							escritor.newLine();
-							escritor.write(name);
-							escritor.newLine();
-							escritor.flush();
-							escritor.close();
-							
-						}
-						
+					
+					if (Partidas1.exists() && Partidas1.length()==0) {
+						System.out.println("no hay partidas guardadas");
 					}
 					
 					
-
-				}
 				
-				
-				
-				
-				System.out.println(name+", que deseas hacer?");
-				System.out.println();
-				MenuUno();
-				int op3 = Integer.valueOf(sc.nextLine());
-				
-				
-				
-				
-				
-				
-				lector.close();
+					lector1.close();
 				} catch (IOException e) {
-					System.out.println("Error");
+					System.out.println();
+					MenuUno();
+					int po2 = Integer.valueOf(sc.nextLine());
+					
+					
+					
 				}
-			
-			
-			
-			
-			
-			
-			break;
-		case 3:
-			
-			System.out.println("Bye");
-			break;
-		}
+				
+				
+				
+				
+				
+				
+				break;
+			case "2":
+				
+				
+				try {
+								
+					BufferedWriter escritor = new BufferedWriter(new FileWriter("Archivos/Registros.txt"));					
+					System.out.print("Nombre: ");
+					String name = sc.nextLine();
+					System.out.println();
+					System.out.println("Bienvenido "+name+"!!");
+					System.out.println();
+					
+					
+					
+					/*
+					if (!lector.equals(null)) {
+						System.out.println("papu :v");
+						escritor.write(name);
+						escritor.newLine();
+						escritor.flush();
+						escritor.close();
+		
+						
+					} else{
+						System.out.println("hola");
+						while (lector.hasNextLine()) {
+							
+							String line = lector.nextLine();
+							
+							if (line.equals(null)) {
+								
+								escritor.newLine();
+								escritor.write(name);
+								escritor.newLine();
+								escritor.flush();
+								escritor.close();
+								
+							}
+							
+						}
+						
+						
+	
+					}
+					
+					
+					*/
+					
+					int men2 = 0;
+					
+					
+					int medallas = 0;
+					
+					do {
+						System.out.println(name+", que deseas hacer?");
+						System.out.println();
+						MenuUno();
+						String op3 = String.valueOf(sc.nextLine());
+						
+						switch(op3) {
+						
+						
+						
+						case "8":
+							
+							escritor.write(name+";"+medallas);
+							
+							
+							men2++;
+							break;
+							
+						}
+					
+					
+					
+					
+					}while (men2 == 0);
+					
+					//lector.close();
+				} catch (IOException e) {
+						System.out.println("Error");
+				}
+				
+				
+				
+				
+				
+				
+				break;
+			case "3":
+				
+				System.out.println("Bye");
+				
+				men++;
+				break;
+				
+			default:
+				
+				System.out.println("Ingrese una opcion valida");
+				
+				System.out.println();
+				break;
+			}
+		
+		}while(men == 0);
 		
 		
 		
-		
-		
-		
+		sc.close();
 
 	}
 
