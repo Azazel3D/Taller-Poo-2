@@ -32,6 +32,21 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
+		File pokemon = new File("Archivos/Pokedex");
+		
+		try {
+			Scanner pok = new Scanner (pokemon);
+			
+			while (pok.hasNextLine()) {
+				
+				String lin = pok.nextLine();
+				String[] part = lin.split(";");
+				
+				
+			}
+		} catch(FileNotFoundException e) {
+			System.out.println("Un error inexperado a ocurrido");
+		}
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -99,7 +114,7 @@ public class Main {
 						escritor.write(name);
 						escritor.newLine();
 						escritor.flush();
-						escritor.close();
+						//escritor.close();
 		
 						
 					} else{
@@ -114,7 +129,7 @@ public class Main {
 								escritor.write(name);
 								escritor.newLine();
 								escritor.flush();
-								escritor.close();
+								//escritor.close();
 								
 							}
 							
